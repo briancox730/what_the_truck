@@ -3,16 +3,55 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :first_name, required: true, autofocus: true, input_html: { class: 'form-control'} %>
-    <%= f.input :last_name, required: true, input_html: { class: 'form-control'} %>
-    <%= f.input :email, required: true, input_html: { class: 'form-control'} %>
-    <%= f.input :password, required: true, input_html: { class: 'form-control'} %>
-    <%= f.input :password_confirmation, required: true, input_html: { class: 'form-control'} %>
-    <%= f.input :profile_photo, type: :file, input_html: { class: 'form-control'} %>
+    <%= f.input :first_name,
+                required: true,
+                autofocus: true,
+                label: false,
+                placeholder: 'First name',
+                input_html: { class: 'form-control'} %>
+                <br>
+
+    <%= f.input :last_name,
+                required: true,
+                label: false,
+                placeholder: 'Last name',
+                input_html: { class: 'form-control'} %>
+                <br>
+
+    <%= f.input :email,
+                required: true,
+                label: false,
+                placeholder: 'Email',
+                input_html: { class: 'form-control'} %>
+                <br>
+
+    <%= f.input :password,
+                required: true,
+                label: false,
+                placeholder: 'Password',
+                input_html: { class: 'form-control'} %>
+                <br>
+
+    <%= f.input :password_confirmation,
+                required: true,
+                label: false,
+                placeholder: 'Password confirmation',
+                input_html: { class: 'form-control'} %>
+                <br>
+
+    <%= f.input :profile_photo,
+                type: :file,
+                label: false,
+                input_html: { class: 'form-control'} %>
   </div>
+
+  <br>
 
   <div class="form-actions">
     <%= f.button :submit, "Sign up", class: "btn btn-lg btn-primary btn-block" %>
   </div>
+
+  <br>
+
   <%= render "devise/shared/links" %>
 <% end %>
